@@ -11,35 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131107054137) do
+ActiveRecord::Schema.define(:version => 20131107210750) do
 
   create_table "assignments", :force => true do |t|
+    t.integer  "section_id"
     t.integer  "weight"
-    t.integer  "grade"
+    t.integer  "points"
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.date     "due_date"
+    t.boolean  "completed",  :default => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "attendances", :force => true do |t|
-    t.integer  "student_id"
-    t.integer  "course_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "course_works", :force => true do |t|
-    t.integer  "assignment_id"
-    t.integer  "attendance_id"
+    t.integer  "enrollment_id"
+    t.date     "date"
+    t.string   "status"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
   end
 
   create_table "courses", :force => true do |t|
-    t.integer  "teacher_id"
     t.string   "title"
-    t.date     "year"
-    t.string   "semester"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "enrollments", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "section_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -47,7 +48,7 @@ ActiveRecord::Schema.define(:version => 20131107054137) do
   create_table "families", :force => true do |t|
     t.integer  "student_id"
     t.integer  "parent_id"
-    t.string   "email"
+    t.string   "username"
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
@@ -60,7 +61,18 @@ ActiveRecord::Schema.define(:version => 20131107054137) do
     t.string   "email"
     t.string   "address"
     t.string   "city"
-    t.string   "zip"
+    t.string   "zipcode"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "sections", :force => true do |t|
+    t.integer  "course_id"
+    t.integer  "teacher_id"
+    t.datetime "time_slot"
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "semester"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
