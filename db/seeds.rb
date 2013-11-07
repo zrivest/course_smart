@@ -19,7 +19,7 @@ Student.create(first_name: 'Alex', last_name: 'Botsford', birthday: '1976-05-22'
 Student.create(first_name: 'Jake', last_name: 'Hoover', birthday: '1976-05-22')
 
 # seed for Parents
-Parent.create(first_name: "Ima", last_name: "Tester", phone: '630-854-3613', email: zrivest@gmail.com, address: Faker::Address.street_address , city: Faker::Address.city, zip: Faker::Address.zip_code)
+Parent.create(first_name: "Ima", last_name: "Tester", phone: '630-854-3613', email: "zrivest@gmail.com", address: Faker::Address.street_address , city: Faker::Address.city, zip: Faker::Address.zip_code)
 Parent.create(first_name: "Alex", last_name: "Hall", phone: Faker::PhoneNumber.phone_number, email: Faker::Internet.email, address: Faker::Address.street_address , city: Faker::Address.city, zip: Faker::Address.zip_code)
 Parent.create(first_name: "Adigo", last_name: "Atabo", phone: Faker::PhoneNumber.phone_number, email: Faker::Internet.email, address: Faker::Address.street_address , city: Faker::Address.city, zip: Faker::Address.zip_code)
 Parent.create(first_name: "Alexander", last_name: "Larson", phone: Faker::PhoneNumber.phone_number, email: Faker::Internet.email, address: Faker::Address.street_address , city: Faker::Address.city, zip: Faker::Address.zip_code)

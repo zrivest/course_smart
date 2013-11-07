@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
     t.string   "email"
     t.string   "address"
     t.string   "city"
-    t.string   "zipcode"
+    t.string   "zip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

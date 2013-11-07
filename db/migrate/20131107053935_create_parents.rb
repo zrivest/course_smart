@@ -7,7 +7,7 @@ class CreateParents < ActiveRecord::Migration
       t.string :email
       t.string :address
       t.string :city
-      t.string :zipcode
+      t.string :zip
 
       t.timestamps
     end
