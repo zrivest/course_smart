@@ -24,8 +24,12 @@ end
 gem 'jquery-rails'
 
 gem 'rails-pry'
+gem 'pry'
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
+
+gem 'faker'
+
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
