@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
   create_table "assignments", :force => true do |t|
     t.integer  "section_id"
     t.integer  "weight"
-    t.integer  "points"
+    t.integer  "possible_points"
+    t.integer  "earned_points"
     t.string   "name"
     t.date     "due_date"
-    t.boolean  "completed",  :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
+    t.boolean  "completed",       :default => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "attendances", :force => true do |t|
@@ -41,8 +42,9 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
   create_table "enrollments", :force => true do |t|
     t.integer  "student_id"
     t.integer  "section_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.integer  "grade_point_average"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "families", :force => true do |t|

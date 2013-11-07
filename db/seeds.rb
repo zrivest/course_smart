@@ -99,7 +99,7 @@ Section.create(course_id: 3, teacher_id: 1, time_slot: '15:00:00 -0600', semeste
 
 # Seed for Assignments
 
-Assignment.create(name: "coordinating conjunction practice", weight: 1, points: 50, due_date: '2013-11-20', completed: false)
-Assignment.create(name: "coordinating conjunction quiz", weight: 2, points: 50, due_date: '2013-11-20', completed: false)
-Assignment.create(name: "coordinating conjunction test", weight: 3, points: 50, due_date: '2013-11-20', completed: false)
+Assignment.create(name: "coordinating conjunction practice", weight: 1, possible_points: 50, earned_points: 50, due_date: '2013-11-20', completed: false)
+Assignment.create(name: "coordinating conjunction quiz", weight: 2, possible_points: 50, earned_points: 50, due_date: '2013-11-20', completed: false)
+Assignment.create(name: "coordinating conjunction test", weight: 3, possible_points: 50, earned_points: 50, due_date: '2013-11-20', completed: false)
 
