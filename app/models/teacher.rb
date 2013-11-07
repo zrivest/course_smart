@@ -1,10 +1,10 @@
 require 'bcrypt'
 
 class Teacher < ActiveRecord::Base
-  attr_accessible :email, :password
+  attr_accessible :first_name, :last_name, :email, :password
 
   has_many :courses
-  has_many :students through: :courses
+  has_many :students, through: :courses
 
   include BCrypt
 
@@ -14,7 +14,7 @@ class Teacher < ActiveRecord::Base
 
   def password=(new_password)
     @password = Password.create(new_password)
-    self.password_hash = @password
+    self.password_digest = @password
   end
 
 end

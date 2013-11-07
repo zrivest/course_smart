@@ -1,4 +1,6 @@
 class Student < ActiveRecord::Base
+  attr_accessible :first_name, :last_name, :birthday
+
 has_many :families
 has_many :courses, through: :attendances
 has_many :teachers, through: :courses
