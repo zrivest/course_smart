@@ -1,6 +1,5 @@
 class Assignment < ActiveRecord::Base
-    attr_accessible :weight, :grade, :name
+  attr_accessible :weight, :grade, :name, :section_id
 
-  has_many :attendances
-  has_many :students, through: :attendances
+  belongs_to :section
 end
