@@ -67,7 +67,7 @@ Family.create(student_id: 8, parent_id: 2, username: "Hall2", password: "123")
 Family.create(student_id: 9, parent_id: 1, username: "Hall2", password: "123")
 Family.create(student_id: 9, parent_id: 2, username: "Hall2", password: "123")
 
-# seed for Courses
+# Seed for Courses
 
 Course.create(title: "English I")
 Course.create(title: "English I")
@@ -85,5 +85,20 @@ Course.create(title: "Algerbra I")
 Course.create(title: "Calculus")
 Course.create(title: "Calculus")
 
+# Seed for Sections
 
+Section.create(course_id: 1, teacher_id: 1, time_slot: '09:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 1, teacher_id: 1, time_slot: '10:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 1, teacher_id: 1, time_slot: '11:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
 
+Section.create(course_id: 2, teacher_id: 1, time_slot: '12:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 2, teacher_id: 1, time_slot: '13:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+
+Section.create(course_id: 3, teacher_id: 1, time_slot: '14:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 3, teacher_id: 1, time_slot: '15:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+
+# Seed for Assignments
+
+Assignment.create(name: "coordinating conjunction practice", weight: 1, points: 50, due_date: '2013-11-20', completed: false)
+Assignment.create(name: "coordinating conjunction quiz", weight: 2, points: 50, due_date: '2013-11-20', completed: false)
+Assignment.create(name: "coordinating conjunction test", weight: 3, points: 50, due_date: '2013-11-20', completed: false)
