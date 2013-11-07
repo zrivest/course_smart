@@ -1,6 +1,5 @@
 class Attendance < ActiveRecord::Base
 
-
-  belongs_to :course
-  belongs_to :student
+  belongs_to :enrollment
+  has_one :student, through: :enrollment
 end

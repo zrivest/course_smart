@@ -4,19 +4,17 @@ class Student < ActiveRecord::Base
 has_many :families
 has_many :parents, through: :families
 
-has_many :attendances
-has_many :courses, through: :attendances
+has_many :enrollments
+has_many :sections, through: :enrollments
 
+has_many :assignments, through: :sections
 
-
-
-
+has_one :teacher, through: :section
+has_many :attendances, through: :enrollments
 
 
 has_many :teachers
 has_many :teachers, through: :courses
 
-has_many :assignments
-has_many :assignments, through: :attendance
 
 end

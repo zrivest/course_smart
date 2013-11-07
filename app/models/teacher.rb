@@ -3,8 +3,13 @@ require 'bcrypt'
 class Teacher < ActiveRecord::Base
   attr_accessible :first_name, :last_name, :email, :password, :prefix
 
-  has_many :courses
-  has_many :assignments, through: :courses
+  belongs_to :course
+
+  has_many :sections
+  has_many :assignments, through: :sections
+  has_many :enrollments, through: :sections
+  has_many :students, through: :enrollments
+
   include BCrypt
 
   def password
