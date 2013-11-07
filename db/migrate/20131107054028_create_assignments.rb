@@ -4,6 +4,8 @@ class CreateAssignments < ActiveRecord::Migration
       t.integer :weight
       t.integer :grade
       t.string :name
+      t.date :due_date
+      t.boolean :completed
 
       t.timestamps
 

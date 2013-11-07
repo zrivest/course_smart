@@ -17,6 +17,8 @@ ActiveRecord::Schema.define(:version => 20131107054137) do
     t.integer  "weight"
     t.integer  "grade"
     t.string   "name"
+    t.date     "due_date"
+    t.boolean  "completed"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -24,15 +26,11 @@ ActiveRecord::Schema.define(:version => 20131107054137) do
   create_table "attendances", :force => true do |t|
     t.integer  "student_id"
     t.integer  "course_id"
+    t.boolean  "late"
+    t.boolean  "attended"
+    t.date     "date"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-  end
-
-  create_table "course_works", :force => true do |t|
-    t.integer  "assignment_id"
-    t.integer  "attendance_id"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
   end
 
   create_table "courses", :force => true do |t|
@@ -42,6 +40,13 @@ ActiveRecord::Schema.define(:version => 20131107054137) do
     t.string   "semester"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "courseworks", :force => true do |t|
+    t.integer  "assignment_id"
+    t.integer  "attendance_id"
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
   end
 
   create_table "families", :force => true do |t|
