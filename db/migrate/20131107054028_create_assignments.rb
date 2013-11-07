@@ -6,7 +6,7 @@ class CreateAssignments < ActiveRecord::Migration
       t.integer :points
       t.string :name
       t.date :due_date
-      t.boolean :completed
+      t.boolean :completed, default: false
       t.timestamps
     end
   end
