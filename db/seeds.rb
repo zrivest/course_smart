@@ -1,12 +1,5 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 require 'faker'
+
 # seed for Teacher
 Teacher.create(prefix: 'Mr.', first_name: 'Zachary', last_name: "Rivest", email: "zrivest@schoolio.edu", password: "123")
 Teacher.create(prefix: 'Mr.', first_name: 'Emily', last_name: "Anderson", email: "eanderson@schoolio.edu", password: "123")
@@ -40,36 +33,57 @@ Parent.create(first_name: "Joe", last_name: "Levering", phone: Faker::PhoneNumbe
 # seed for Families
 
 # DAVE HOOVER && JAKE HOOVER Family
-Family.create(student_id: 1, parent_id: 10, email: "Levering10", password: "123")
-Family.create(student_id: 1, parent_id: 9, email: "Levering10", password: "123")
+Family.create(student_id: 1, parent_id: 10, username: "Levering10", password: "123")
+Family.create(student_id: 1, parent_id: 9, username: "Levering10", password: "123")
 
-Family.create(student_id: 10, parent_id: 10, email: "Levering10", password: "123")
-Family.create(student_id: 10, parent_id: 9, email: "Levering10", password: "123")
+Family.create(student_id: 10, parent_id: 10, username: "Levering10", password: "123")
+Family.create(student_id: 10, parent_id: 9, username: "Levering10", password: "123")
 
 # ABI FAMILY Family
-Family.create(student_id: 2, parent_id: 8, email: "Gray8", password: "123")
-Family.create(student_id: 2, parent_id: 7, email: "Gray8", password: "123")
+Family.create(student_id: 2, parent_id: 8, username: "Gray8", password: "123")
+Family.create(student_id: 2, parent_id: 7, username: "Gray8", password: "123")
 
 # ALYSSA DIAZ && MIKE DIAZ Family
-Family.create(student_id: 3, parent_id: 5, email: "Diaz6", password: "123")
-Family.create(student_id: 3, parent_id: 6, email: "Diaz6", password: "123")
+Family.create(student_id: 3, parent_id: 5, username: "Diaz6", password: "123")
+Family.create(student_id: 3, parent_id: 6, username: "Diaz6", password: "123")
 
-Family.create(student_id: 4, parent_id: 5, email: "Diaz6", password: "123")
-Family.create(student_id: 4, parent_id: 6, email: "Diaz6", password: "123")
+Family.create(student_id: 4, parent_id: 5, username: "Diaz6", password: "123")
+Family.create(student_id: 4, parent_id: 6, username: "Diaz6", password: "123")
 
 # JONATHAN && K && JEN SOLO Family
-Family.create(student_id: 5, parent_id: 3, email: "Larson4", password: "123")
-Family.create(student_id: 5, parent_id: 4, email: "Larson4", password: "123")
+Family.create(student_id: 5, parent_id: 3, username: "Larson4", password: "123")
+Family.create(student_id: 5, parent_id: 4, username: "Larson4", password: "123")
 
-Family.create(student_id: 6, parent_id: 3, email: "Larson4", password: "123")
-Family.create(student_id: 6, parent_id: 4, email: "Larson4", password: "123")
+Family.create(student_id: 6, parent_id: 3, username: "Larson4", password: "123")
+Family.create(student_id: 6, parent_id: 4, username: "Larson4", password: "123")
 
-Family.create(student_id: 7, parent_id: 3, email: "Larson4", password: "123")
-Family.create(student_id: 7, parent_id: 4, email: "Larson4", password: "123")
+Family.create(student_id: 7, parent_id: 3, username: "Larson4", password: "123")
+Family.create(student_id: 7, parent_id: 4, username: "Larson4", password: "123")
 
 # RYAN && ALEX Family
-Family.create(student_id: 8, parent_id: 1, email: "Hall2", password: "123")
-Family.create(student_id: 8, parent_id: 2, email: "Hall2", password: "123")
+Family.create(student_id: 8, parent_id: 1, username: "Hall2", password: "123")
+Family.create(student_id: 8, parent_id: 2, username: "Hall2", password: "123")
 
-Family.create(student_id: 9, parent_id: 1, email: "Hall2", password: "123")
-Family.create(student_id: 9, parent_id: 2, email: "Hall2", password: "123")
+Family.create(student_id: 9, parent_id: 1, username: "Hall2", password: "123")
+Family.create(student_id: 9, parent_id: 2, username: "Hall2", password: "123")
+
+# seed for Courses
+
+Course.create(title: "English I")
+Course.create(title: "English I")
+Course.create(title: "English I")
+Course.create(title: "English I")
+Course.create(title: "English I")
+Course.create(title: "Senior Comp.")
+Course.create(title: "Senior Comp.")
+
+Course.create(title: "Algerbra I")
+Course.create(title: "Algerbra I")
+Course.create(title: "Algerbra I")
+Course.create(title: "Algerbra I")
+Course.create(title: "Algerbra I")
+Course.create(title: "Calculus")
+Course.create(title: "Calculus")
+
+
+
