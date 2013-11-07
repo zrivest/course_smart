@@ -7,7 +7,6 @@ class CreateSections < ActiveRecord::Migration
       t.date :start_date
       t.date :end_date
       t.string :semester
-      t.string :year
       t.timestamps
     end
   end

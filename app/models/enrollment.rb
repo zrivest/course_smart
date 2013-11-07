@@ -1,4 +1,5 @@
 class Enrollment < ActiveRecord::Base
+  attr_accessible :student_id, :section_id
 
  has_many :attendances
 

@@ -38,6 +38,13 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "enrollments", :force => true do |t|
+    t.integer  "student_id"
+    t.integer  "section_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "families", :force => true do |t|
     t.integer  "student_id"
     t.integer  "parent_id"
@@ -59,13 +66,6 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "rosters", :force => true do |t|
-    t.integer  "student_id"
-    t.integer  "section_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "sections", :force => true do |t|
     t.integer  "course_id"
     t.integer  "teacher_id"
@@ -73,7 +73,6 @@ ActiveRecord::Schema.define(:version => 20131107210750) do
     t.date     "start_date"
     t.date     "end_date"
     t.string   "semester"
-    t.string   "year"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
