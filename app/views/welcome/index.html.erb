@@ -1,1 +1,7 @@
 Hey there
+
+<% @teachers.each do |teacher| %>
+
+<%= link_to teacher.full_name, teacher_path(teacher) %>
+
+<% end %>

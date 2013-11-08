@@ -1,5 +1,5 @@
 class Enrollment < ActiveRecord::Base
-  attr_accessible :student_id, :section_id
+ attr_accessible :grade_average, :student_id, :section_id
 
  has_many :attendances
 

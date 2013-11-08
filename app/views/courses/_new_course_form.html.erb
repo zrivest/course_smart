@@ -1,0 +1,11 @@
+<%= form_for course do |f| %>
+  <ul class="form" id="new course">
+    <li>
+      <%= f.label :title  %>
+      <%= f.text_area :title %>
+    </li>
+    <li>
+      <%= f.submit "New Class"%>
+    </li>
+  </ul>
+<% end %>

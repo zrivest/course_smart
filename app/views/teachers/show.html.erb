@@ -1,0 +1,31 @@
+<h1><%=@teacher.first_name%>'s Teacher Home Page</h1>
+<div id="all_courses">
+
+  <h2>All Courses</h2>
+
+
+   <% @teacher.sections.each do |section| %>
+    
+    <li><%= link_to "
+      #{section.course.title}
+      #{section.semester}
+      #{section.time_slot.hour%12}:00 ", section_path(section)%>
+    </li>
+    <% end %>
+  <button class="link_button" id="show_current_semester_courses">Current Semester Courses </button>
+</div>
+
+<div id="current_semester_courses">
+  <% current_semester_sections.each do |section| %>
+
+    <li><%= link_to  "
+      #{section.course.title}
+      #{section.semester}
+      #{section.time_slot.hour%12}:00 ", section_path(section)%>
+    </li>
+  
+  <% end %>
+  <button class="link_button" id="show_all_courses">All Courses </button>
+</div>
+
+<button class="link_button" id="create_new_course">New Course </button>

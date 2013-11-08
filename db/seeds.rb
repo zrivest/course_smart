@@ -70,10 +70,10 @@ Family.create(student_id: 9, parent_id: 2, username: "Hall2", password: "123")
 # Seed for Courses
 
 Course.create(title: "English I")
+Course.create(title: "Math")
 Course.create(title: "English I")
 Course.create(title: "English I")
-Course.create(title: "English I")
-Course.create(title: "English I")
+Course.create(title: "English II")
 Course.create(title: "Senior Comp.")
 Course.create(title: "Senior Comp.")
 
@@ -87,15 +87,15 @@ Course.create(title: "Calculus")
 
 # Seed for Sections
 
-Section.create(course_id: 1, teacher_id: 1, time_slot: '09:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
-Section.create(course_id: 1, teacher_id: 1, time_slot: '10:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
-Section.create(course_id: 1, teacher_id: 1, time_slot: '11:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 1, teacher_id: 1, time_slot: '09:00:00 -0600', semester: "SP", start_date: '2014-01-05', end_date: '2014-06-23')
+Section.create(course_id: 1, teacher_id: 2, time_slot: '10:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2013-12-30')
+Section.create(course_id: 1, teacher_id: 1, time_slot: '11:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2013-12-30')
 
-Section.create(course_id: 2, teacher_id: 1, time_slot: '12:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
-Section.create(course_id: 2, teacher_id: 1, time_slot: '13:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 2, teacher_id: 1, time_slot: '12:00:00 -0600', semester: "SP", start_date: '2014-01-05', end_date: '2014-06-23')
+Section.create(course_id: 2, teacher_id: 1, time_slot: '13:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2013-12-30')
 
-Section.create(course_id: 3, teacher_id: 1, time_slot: '14:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
-Section.create(course_id: 3, teacher_id: 1, time_slot: '15:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2014-06-23')
+Section.create(course_id: 3, teacher_id: 1, time_slot: '14:00:00 -0600', semester: "FA", start_date: '2013-08-23', end_date: '2013-12-30')
+Section.create(course_id: 3, teacher_id: 1, time_slot: '15:00:00 -0600', semester: "SP", start_date: '2014-01-05', end_date: '2014-12-23')
 
 # Seed for Assignments
 
