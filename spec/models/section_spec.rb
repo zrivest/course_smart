@@ -12,5 +12,17 @@ describe Section do
 
       expect(section.students eq(Student.any?)).to be_true
     end
+
+    it "should be able to add an assignment to a section" do
+      teacher = FactoryGirl.create(:teacher)
+      student = FactoryGirl.create(:student)
+      course = FactoryGirl.create(:course)
+      section = FactoryGirl.create(:section)
+      homework = FactoryGirl.create(:assignment)
+
+      section.assignments << homework
+
+      expect(section.assignments eq(homework)).to be_true
+    end
   end
 end
