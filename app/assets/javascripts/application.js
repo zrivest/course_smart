@@ -14,5 +14,9 @@
 //= require jquery_ujs
 //= require foundation
 //= require_tree .
+$(document).ready(function(){
+  $('#create_new_course').on('click', function(){
+    $('#course_container').html('<%=j(render(:partial => 'courses/new_course_form')) %>)
 
-$(document).foundation();
+  });
+})

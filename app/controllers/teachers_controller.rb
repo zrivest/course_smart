@@ -7,6 +7,8 @@ class TeachersController < ApplicationController
   def show
     @teacher = Teacher.find(params[:id])
     session[:teacher_id] = params[:id]
+
+
   end
   
 end
