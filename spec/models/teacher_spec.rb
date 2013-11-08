@@ -12,5 +12,15 @@ describe Teacher do
 
       expect(teacher.sections[0].students.include?(student)).to be_true
     end
+
+    it "should be able to add a section" do
+      teacher = FactoryGirl.create(:teacher)
+      course = FactoryGirl.create(:course)
+      section = FactoryGirl.create(:section)
+
+      teacher.sections << section
+
+      expect(Teacher.first.sections.include?(section)).to be_true
+    end
   end
 end
