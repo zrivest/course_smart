@@ -20,7 +20,17 @@ describe Teacher do
 
       teacher.sections << section
 
-      expect(Teacher.first.sections.include?(section)).to be_true
+      expect(teacher.sections.include?(section)).to be_true
+    end
+
+    it "should be to find a teacher by section" do
+      instructor = FactoryGirl.create(:teacher)
+      course = FactoryGirl.create(:course)
+      section = FactoryGirl.create(:section)
+
+      instructor.sections << section
+
+      expect(section.teacher eq(Teacher.find(1)))
     end
   end
 end
