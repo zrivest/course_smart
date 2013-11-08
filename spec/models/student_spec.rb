@@ -2,15 +2,17 @@ require 'spec_helper'
 
 describe Student do
   context '#associations' do
-    it "should be able to see the students enrolled in a course" do
+    it "should be able to see all assignments for a specific student" do
       teacher = FactoryGirl.create(:teacher)
       student = FactoryGirl.create(:student)
       course = FactoryGirl.create(:course)
       section = FactoryGirl.create(:section)
+      homework = FactoryGirl.create(:assignment)
 
       section.students << student
-
-      expect(section.students eq(Student.any?)).to be_true
+      section.assignments << homework
+      binding.pry
+      expect(student.assignments eq([homework])).to be_true
     end
   end
 end

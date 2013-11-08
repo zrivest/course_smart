@@ -22,7 +22,7 @@ describe Section do
 
       section.assignments << homework
 
-      expect(section.assignments eq(homework)).to be_true
+      expect(section.assignments eq([homework])).to be_true
     end
   end
 end
