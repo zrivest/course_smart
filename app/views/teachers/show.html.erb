@@ -1,4 +1,4 @@
-<div id="course_container"
+<!-- <div id="course_container"
 <h1><%=@teacher.first_name%>'s Teacher Home Page</h1>
 <div id="all_courses">
 
@@ -27,10 +27,22 @@
   
   <% end %>
   <button class="link_button" id="show_all_courses">All Courses </button>
-</div>
 
-
-<div id="new_course"></div>
 <button class="link_button" id="create_new_course">New Course </button>
-  <%= render :partial => "courses/new_course_form" %>
+
+<div id="new_course" class="partial_hidden"></div>
+  <%= render :partial => "courses/new_course" %>
 </div>
+
+
+
+
+
+
+
+</div>
+
+<%= link_to  "New Course", new_course_path, id: "create_new_course" %>
+<div class="create_form"></div>
+
+ -->

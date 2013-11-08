@@ -15,8 +15,23 @@
 //= require foundation
 //= require_tree .
 $(document).ready(function(){
-  $('#new_course').hide();
-  $('#create_new_course').on('click', function(){
-    $('#new_course').show();
-  });
-})
+
+
+  
+  // $('#create_new_course').on('click', function(event){
+  //   event.preventDefault();
+  //   $.get('/courses/new', function(response){
+  //     $(".create_form").append(response);
+  //   });
+  // });
+
+  // $("body").on('submit', "#new_course", function(event){
+  //   event.preventDefault();
+  //   var url = "/courses";
+  //   var data=  "something";
+  //   $.post(url,data,function(response){
+  //     $(".create_form").remove();
+
+  //   });
+  // });
+});

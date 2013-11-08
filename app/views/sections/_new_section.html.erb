@@ -1,0 +1,9 @@
+<%= form_for 'teacher[section]/new' do |f| %>
+  <%= f.label :time_slot  %>
+  <%= f.text_area :time_slot %>
+
+  <%= f.label :semester %>
+  <%= f.text_area :semester %>
+
+<%= f.submit "New Section"%>
+<% end %>

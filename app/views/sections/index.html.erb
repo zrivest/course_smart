@@ -1,0 +1,52 @@
+<div id="course_container"
+<h1><%=@teacher.first_name%>'s Teacher Home Page</h1>
+<div id="all_courses">
+
+  <h2>All Sections</h2>
+
+
+   <% @teacher.sections.each do |section| %>
+    
+    <li><%= link_to "
+      #{section.course.title}
+      #{section.semester}
+      #{section.time_slot.hour%12}:00 ", teacher_sections_path(section)%>
+    </li>
+    <% end %>
+  <button class="link_button" id="show_current_semester_courses">Current Semester Sections </button>
+</div>
+
+<div id="current_semester_courses">
+  <% current_semester_sections.each do |section| %>
+
+    <li><%= link_to  "
+      #{section.course.title}
+      #{section.semester}
+      #{section.time_slot.strftime("%I:%M%p")}", teacher_sections_path(section)%>
+    </li>
+  
+  <% end %>
+  <button class="link_button" id="show_all_courses">All Sections </button>
+
+<button class="link_button" id="new_course_button">New Course 
+</button>
+<div id="new_course_partial" class="partial_hidden">
+  <%= render :partial => "courses/new_course" %>
+</div>
+
+<button class="link_button" id="new_course_button">New Section 
+</button>
+  <ul>
+  <% @courses.each do |course| %>
+    
+    <li><%= link_to "#{course.title}", course_path(course) %></li>
+  <% end %>
+  </ul>
+<div id="new_course_partial" class="partial_hidden">
+  <%= render :partial => "sections/new_section" %>
+</div>
+
+
+
+
+
