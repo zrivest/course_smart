@@ -29,5 +29,6 @@ describe Student do
 
       expect(student.attendances eq([attendance])).to be_true
     end
+
   end
 end
