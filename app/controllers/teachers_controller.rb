@@ -8,7 +8,7 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
     session[:teacher_id] = params[:id]
 
-
+    @course = Course.new
   end
   
 end

@@ -4,4 +4,7 @@ class SectionsController < ApplicationController
     
   end
 
+  def show
+  end
+  
 end

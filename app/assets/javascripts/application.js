@@ -15,8 +15,8 @@
 //= require foundation
 //= require_tree .
 $(document).ready(function(){
+  $('#new_course').hide();
   $('#create_new_course').on('click', function(){
-    $('#course_container').html('<%=j(render(:partial => 'courses/new_course_form')) %>)
-
+    $('#new_course').show();
   });
 })

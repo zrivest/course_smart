@@ -22,13 +22,15 @@
     <li><%= link_to  "
       #{section.course.title}
       #{section.semester}
-      #{section.time_slot.hour%12}:00 ", section_path(section)%>
+      #{section.time_slot.strftime("%I:%M%p")}", section_path(section)%>
     </li>
   
   <% end %>
   <button class="link_button" id="show_all_courses">All Courses </button>
 </div>
 
-<div id="new_course_form"></div>
+
+<div id="new_course"></div>
 <button class="link_button" id="create_new_course">New Course </button>
+  <%= render :partial => "courses/new_course_form" %>
 </div>
